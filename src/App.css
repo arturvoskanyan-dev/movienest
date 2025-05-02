@@ -1,0 +1,11 @@
+body {
+    background-color: #0f0f0f;
+}
+
+.home_page {
+    max-height: 860px;
+    height: 80vh;
+    background-image: url("./assets/home.png");
+    background-position: center;
+    background-size: cover;
+}
