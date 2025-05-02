@@ -1,8 +1,20 @@
+import { useEffect, useState } from "react"
 import {CiSearch, PiUserCircle} from "../index"
 
 export default function Header() {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 0);
+        }
+      
+          window.addEventListener("scroll", handleScroll);
+          return () => window.removeEventListener("scroll", handleScroll);
+    }, [])
+
   return (
-    <header className='fixed left-0 top-0 right-0 w-full z-50'>
+    <header className={`fixed left-0 top-0 right-0 w-full z-50 duration-300 ${scrolled && "backdrop-blur-md"}`}>
         <section className='flex items-center justify-between max-w-[1440px] h-[120px] mx-auto px-12'>
             <div className='flex items-center gap-1 cursor-pointer'>
                 <img src="/logo.png" alt="logo" />
