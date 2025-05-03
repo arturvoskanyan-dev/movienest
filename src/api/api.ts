@@ -14,6 +14,14 @@ const API = {
 
     getGenresFilms(genresId:number) {
         return instance.get(`/discover/movie?api_key=${API_KEY}&with_genres=${genresId}`)
+    },
+
+    getFilm(movie_id:number) {
+        return instance.get(`movie/${movie_id}?api_key=${API_KEY}`)
+    },
+
+    getFilmVideo(movie_id:number) {
+        return instance.get(`/movie/${movie_id}/videos?api_key=${API_KEY}`)
     }
 }
 

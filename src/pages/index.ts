@@ -1,4 +1,5 @@
-import { HomePage } from "../components";
+import HomePage from "./HomePage/HomePage"
 import GenrePage from "./GenrePage/GenrePage";
+import FilmPage from "./FilmPage/FilmPage";
 
-export {HomePage, GenrePage}
+export {HomePage, GenrePage, FilmPage}
