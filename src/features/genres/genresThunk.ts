@@ -16,6 +16,6 @@ export const getGenresFilms = createAsyncThunk(
     async(genresId:number) => {
         const response = await API.getGenresFilms(genresId);
 
-        return response.data
+        return response.data.results
     }
 )

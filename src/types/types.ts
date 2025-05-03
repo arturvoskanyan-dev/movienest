@@ -6,6 +6,7 @@ export type GenresType = {
 }
 export type GenresSliceStateType = {
     genres : Array<GenresType>,
+    genresFilms: any
 }
 
 export interface FilmsType {

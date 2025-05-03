@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="w-full bg-[#090909]">
-        <section className="max-w-[1440px] h-[204px] w-full px-12 py-[48px] mx-auto flex justify-between text-white [&>div>span]:text-[#999999] [&>div>h4]:text-xl">
+        <section className="max-w-[1440px] w-full px-12 py-[48px] mx-auto flex justify-between text-white [&>div>span]:text-[#999999] [&>div>h4]:text-xl">
             <div className="flex flex-col">
                 <h4>Home</h4>
                 <span>Categories</span>
