@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
-import {HomePage} from "./components/index"
+import {HomePage, GenrePage} from "./pages/index"
 import './App.css'
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<HomePage />} />
+          <Route path='/category/:id' element={<GenrePage />} />
         </Route>
       </Routes>
     </section>

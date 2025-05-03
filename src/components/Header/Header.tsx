@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import {CiSearch, PiUserCircle} from "../index"
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -21,7 +22,7 @@ export default function Header() {
                 <h2 className='text-[24px] text-white font-mono'>MovieNest</h2>
             </div>
             <ul className='bg-[#0F0F0F] border-3 border-[#1F1F1F] text-white w-[555px] h-[75px] flex items-center justify-center gap-8 rounded-md [&>li]:text-md [&>li]:cursor-pointer'>
-                <li className='py-[14px] px-[24px] bg-[#1A1A1A] rounded-md'>Home</li>
+                <NavLink to="/" className='py-[14px] px-[24px] bg-[#1A1A1A] rounded-md'>Home</NavLink>
                 <li>Movies & Shows</li>
                 <li>Support</li>
                 <li>Subscriptions</li>

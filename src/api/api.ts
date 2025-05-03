@@ -10,6 +10,10 @@ const instance = axios.create({
 const API = {
     getGenres() {
         return instance.get<GetGenresReturnType>(`/genre/movie/list?api_key=${API_KEY}&language=en-US`)
+    },
+
+    getGenresFilms(genresId:number) {
+        return instance.get(`/discover/movie?api_key=${API_KEY}&with_genres=${genresId}`)
     }
 }
 

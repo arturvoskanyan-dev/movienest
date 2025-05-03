@@ -18,7 +18,7 @@ export default function HomeGenres() {
                 <p className="text-[#999999] leading-8">Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new</p>
             </div>
             <div className="flex gap-3 flex-wrap">
-                {genres?.map((genre) => <GenresItem name={genre.name} />)}
+                {genres?.map((genre) => <GenresItem genre={genre} />)}
             </div>
         </section>
     )

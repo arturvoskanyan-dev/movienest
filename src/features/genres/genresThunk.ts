@@ -10,3 +10,12 @@ export const getGenres = createAsyncThunk<Array<GenresType>>(
         return response.data.genres
     }
 )
+
+export const getGenresFilms = createAsyncThunk(
+    "get/genres/films",
+    async(genresId:number) => {
+        const response = await API.getGenresFilms(genresId);
+
+        return response.data
+    }
+)

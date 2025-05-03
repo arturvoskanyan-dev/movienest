@@ -9,3 +9,8 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+.trail {
+    height: 313px;
+    background-image: url("./assets/trail.png");
+}
