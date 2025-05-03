@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
+import { FilmsType } from "../../types/types";
 
-export default function FilmsItem({ film }: any) {
+export default function FilmsItem({ film  }: {film: FilmsType}) {
     return (
         <section className='p-[20px] bg-[#262626] rounded-md duration-300 hover:scale-125'>
             <NavLink to={`/film/${film.id}`}>

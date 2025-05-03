@@ -10,16 +10,15 @@ export default function GenrePage() {
   let { id } = useParams();
 
   useEffect(() => {
-    dispatch(getGenresFilms(id))
+    dispatch(getGenresFilms(+id!))
   }, [id])
-  
 
   return (
     <section className='px-12 py-28'>
       <h3 className='text-3xl text-white p-12'>Our Genre</h3>
       <div className='flex justify-center flex-wrap gap-12'>
         {
-          genresFilms.map((film:any) => <FilmsItem key={film.id} film={film} />)
+          genresFilms.map((film) => <FilmsItem key={film.id} film={film} />)
         }
       </div>
     </section>

@@ -10,10 +10,10 @@ export default function FilmPage() {
     let {id} = useParams();
 
     useEffect(() => {
-        dispatch(getFilm(id))
-        dispatch(getFilmVideo(id))
+        dispatch(getFilm(+id!))
+        dispatch(getFilmVideo(+id!))
     }, [id])
-
+    
     return (
         <section className='max-w-[1440px] mx-auto'>
             <div className='pt-[120px] px-12 relative'>

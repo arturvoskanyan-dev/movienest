@@ -1,12 +1,6 @@
-/// ReduxSliceType
-
 export type GenresType = {
     id : number,
     name : string,
-}
-export type GenresSliceStateType = {
-    genres : Array<GenresType>,
-    genresFilms: any
 }
 
 export interface FilmsType {
@@ -25,6 +19,7 @@ export interface FilmsType {
     vote_average : number,
     vote_count : number
 }
+
 export interface FilmsSliceStateType {
     page : number,
     results : Array<FilmsType>
@@ -32,4 +27,14 @@ export interface FilmsSliceStateType {
 
 export type GetGenresReturnType = {
     genres : Array<GenresType>
+}
+
+export type GenresSliceStateType = {
+    genres : Array<GenresType>,
+    genresFilms: Array<FilmsType>
+}
+
+export type FilmSliceStateType = {
+    film: FilmsType,
+    videoKey: string
 }

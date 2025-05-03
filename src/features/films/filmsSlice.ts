@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit"
 import { getFilm, getFilmVideo } from "./filmsThunk";
+import { FilmSliceStateType, FilmsType } from "../../types/types";
 
-const initialState = {
-    film: {},
+const initialState: FilmSliceStateType = {
+    film: {} as FilmsType,
     videoKey: ""
 }
 
