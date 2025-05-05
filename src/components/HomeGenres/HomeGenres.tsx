@@ -4,12 +4,13 @@ import { getGenres } from "../../features/genres/genresThunk";
 import GenresItem from "../GenresItem/GenresItem";
 
 export default function HomeGenres() {
+    const {language} = useAppSelector((state) => state.global);
     const { genres } = useAppSelector((state) => state.genres);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
-        dispatch(getGenres())
-    }, [])
+        dispatch(getGenres(language))
+    }, [language])
 
     return (
         <section className="max-w-[1440px] mx-auto py-40 px-12 flex flex-col gap-12">

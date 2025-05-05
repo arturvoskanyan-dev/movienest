@@ -6,6 +6,7 @@ import HomePage from "../pages/HomePage/HomePage";
 
 import { CiSearch } from "react-icons/ci";
 import { PiUserCircle } from "react-icons/pi";
+import { GrLanguage } from "react-icons/gr";
 
-export {CiSearch, PiUserCircle}
+export {CiSearch, PiUserCircle, GrLanguage}
 export {HomePage}

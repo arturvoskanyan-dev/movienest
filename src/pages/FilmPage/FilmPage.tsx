@@ -6,13 +6,16 @@ import { FaPlay } from "react-icons/fa6";
 
 export default function FilmPage() {
     const {film, videoKey} = useAppSelector((state) => state.film);
+    const {language} = useAppSelector((state) => state.global)
     const dispatch = useAppDispatch();
     let {id} = useParams();
 
     useEffect(() => {
-        dispatch(getFilm(+id!))
-        dispatch(getFilmVideo(+id!))
-    }, [id])
+        dispatch(getFilm({movie_id: +id!, language}))
+        dispatch(getFilmVideo({movie_id: +id!, language}))
+        // dispatch(getFilm(+id!, language))
+        // dispatch(getFilmVideo(+id!, language))
+    }, [id, language])
     
     return (
         <section className='max-w-[1440px] mx-auto'>

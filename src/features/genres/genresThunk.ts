@@ -2,10 +2,10 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { GenresType } from "../../types/types";
 import API from "../../api/api";
 
-export const getGenres = createAsyncThunk<Array<GenresType>>(
+export const getGenres = createAsyncThunk<Array<GenresType>, string>(
     "get/genres",
-    async() => {
-        const response = await API.getGenres();
+    async(language) => {
+        const response = await API.getGenres(language);
 
         return response.data.genres
     }
@@ -13,8 +13,10 @@ export const getGenres = createAsyncThunk<Array<GenresType>>(
 
 export const getGenresFilms = createAsyncThunk(
     "get/genres/films",
-    async(genresId:number) => {
-        const response = await API.getGenresFilms(genresId);
+    async({genresId, language}: {genresId: number, language: string}) => {
+        console.log(genresId);
+        
+        const response = await API.getGenresFilms(genresId, language);
 
         return response.data.results
     }

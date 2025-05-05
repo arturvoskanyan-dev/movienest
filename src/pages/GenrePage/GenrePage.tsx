@@ -6,12 +6,13 @@ import FilmsItem from '../../components/FilmsItem/FilmsItem';
 
 export default function GenrePage() {
   const { genresFilms } = useAppSelector((state) => state.genres);
+  const {language} = useAppSelector((state) => state.global);
   const dispatch = useAppDispatch();
   let { id } = useParams();
 
   useEffect(() => {
-    dispatch(getGenresFilms(+id!))
-  }, [id])
+    dispatch(getGenresFilms({genresId: +id!, language}))
+  }, [id, language])
 
   return (
     <section className='px-12 py-28'>

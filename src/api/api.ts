@@ -8,20 +8,22 @@ const instance = axios.create({
 })
 
 const API = {
-    getGenres() {
-        return instance.get<GetGenresReturnType>(`/genre/movie/list?api_key=${API_KEY}&language=en-US`)
+    getGenres(language:string) {
+        return instance.get<GetGenresReturnType>(`/genre/movie/list?api_key=${API_KEY}&language=${language}`)
     },
 
-    getGenresFilms(genresId:number) {
-        return instance.get<FilmsSliceStateType>(`/discover/movie?api_key=${API_KEY}&with_genres=${genresId}`)
+    getGenresFilms(genresId:number, language:string) {
+        console.log(genresId, language);
+        
+        return instance.get<FilmsSliceStateType>(`/discover/movie?api_key=${API_KEY}&with_genres=${genresId}&language=${language}`)
     },
 
-    getFilm(movie_id:number) {
-        return instance.get<FilmsType>(`movie/${movie_id}?api_key=${API_KEY}`)
+    getFilm(movie_id:number, language:string) {
+        return instance.get<FilmsType>(`movie/${movie_id}?api_key=${API_KEY}&language=${language}`)
     },
 
-    getFilmVideo(movie_id:number) {
-        return instance.get(`/movie/${movie_id}/videos?api_key=${API_KEY}`)
+    getFilmVideo(movie_id:number, language:string) {
+        return instance.get(`/movie/${movie_id}/videos?api_key=${API_KEY}&language=${language}`)
     }
 }
 
