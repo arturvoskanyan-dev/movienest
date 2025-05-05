@@ -1,18 +1,33 @@
 import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/hooks/hooks'
 import { getGenresFilms } from '../../features/genres/genresThunk';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import FilmsItem from '../../components/FilmsItem/FilmsItem';
 
 export default function GenrePage() {
   const { genresFilms } = useAppSelector((state) => state.genres);
-  const {language} = useAppSelector((state) => state.global);
+  const { language } = useAppSelector((state) => state.global);
   const dispatch = useAppDispatch();
-  let { id } = useParams();
+  let { id, page } = useParams();
+  let navigate = useNavigate()
 
   useEffect(() => {
-    dispatch(getGenresFilms({genresId: +id!, language}))
-  }, [id, language])
+    dispatch(getGenresFilms({ genresId: +id!, language, page: 1 }))
+  }, [id, language, page])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const newPage = +page! + 1;
+      if (window.innerHeight + window.scrollY > document.body.offsetHeight - 100) {
+        dispatch(getGenresFilms({ genresId: +id!, language, page: newPage }));
+        navigate(`/category/${id}/${newPage}`)
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [page])
 
   return (
     <section className='px-12 py-28'>
@@ -21,6 +36,12 @@ export default function GenrePage() {
         {
           genresFilms.map((film) => <FilmsItem key={film.id} film={film} />)
         }
+      </div>
+      <div className='w-full flex justify-center pt-20'>
+        <button
+          className='w-[251px] h-[54px] bg-[#E50000] text-white text-xl rounded-md cursor-pointer duration-300 hover:bg-[#ff9999]'>
+          View All
+        </button>
       </div>
     </section>
   )

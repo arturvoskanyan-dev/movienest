@@ -12,10 +12,8 @@ const API = {
         return instance.get<GetGenresReturnType>(`/genre/movie/list?api_key=${API_KEY}&language=${language}`)
     },
 
-    getGenresFilms(genresId:number, language:string) {
-        console.log(genresId, language);
-        
-        return instance.get<FilmsSliceStateType>(`/discover/movie?api_key=${API_KEY}&with_genres=${genresId}&language=${language}`)
+    getGenresFilms(genresId:number, language:string, page:number) {
+        return instance.get<FilmsSliceStateType>(`/discover/movie?api_key=${API_KEY}&with_genres=${genresId}&language=${language}&page=${page}`)
     },
 
     getFilm(movie_id:number, language:string) {

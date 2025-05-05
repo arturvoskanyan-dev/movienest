@@ -13,10 +13,8 @@ export const getGenres = createAsyncThunk<Array<GenresType>, string>(
 
 export const getGenresFilms = createAsyncThunk(
     "get/genres/films",
-    async({genresId, language}: {genresId: number, language: string}) => {
-        console.log(genresId);
-        
-        const response = await API.getGenresFilms(genresId, language);
+    async({genresId, language, page}: {genresId: number, language: string, page: number}) => {
+        const response = await API.getGenresFilms(genresId, language, page);
 
         return response.data.results
     }

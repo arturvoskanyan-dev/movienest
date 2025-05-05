@@ -13,8 +13,6 @@ export default function FilmPage() {
     useEffect(() => {
         dispatch(getFilm({movie_id: +id!, language}))
         dispatch(getFilmVideo({movie_id: +id!, language}))
-        // dispatch(getFilm(+id!, language))
-        // dispatch(getFilmVideo(+id!, language))
     }, [id, language])
     
     return (
