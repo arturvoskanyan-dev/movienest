@@ -2,9 +2,10 @@ import axios from "axios";
 import { FilmsSliceStateType, FilmsType, GetGenresReturnType } from "../types/types";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+const baseURL = import.meta.env.VITE_TMDB_BASE_URL;
 
 const instance = axios.create({
-    baseURL: "https://api.themoviedb.org/3",
+    baseURL: baseURL,
 })
 
 const API = {

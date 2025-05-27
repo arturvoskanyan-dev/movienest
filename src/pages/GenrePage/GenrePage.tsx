@@ -13,7 +13,7 @@ export default function GenrePage() {
 
   useEffect(() => {
     dispatch(getGenresFilms({ genresId: +id!, language, page: 1 }))
-  }, [id, language, page])
+  }, [id, language, page])  
 
   useEffect(() => {
     const handleScroll = () => {
