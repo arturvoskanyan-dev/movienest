@@ -21,7 +21,6 @@ export default function GenrePage() {
       if (window.innerHeight + window.scrollY > document.body.offsetHeight - 100) {
         dispatch(getGenresFilms({ genresId: +id!, language, page: newPage }));
         navigate(`/category/${id}/${newPage}`)
-        window.scrollTo({ top: 0, behavior: "smooth" })
       }
     }
 

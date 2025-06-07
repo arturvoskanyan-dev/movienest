@@ -17,7 +17,7 @@ const genresSlice = createSlice({
             state.genres = action.payload;
         })
         .addCase(getGenresFilms.fulfilled, (state, action) => {
-            state.genresFilms = action.payload;
+            state.genresFilms = [...state.genresFilms, ...action.payload];
         })
     }
 })
