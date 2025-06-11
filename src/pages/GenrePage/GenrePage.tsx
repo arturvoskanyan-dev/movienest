@@ -13,6 +13,7 @@ export default function GenrePage() {
 
   useEffect(() => {
     dispatch(getGenresFilms({ genresId: +id!, language, page: 1 }))
+    console.log(id)
   }, [id, language, page])  
 
   useEffect(() => {

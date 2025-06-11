@@ -2,6 +2,9 @@
 
 import HomePage from "../pages/HomePage/HomePage";
 import FilmDescription from "./FilmDescription/FilmDescription";
+import DeviceItem from "./Devices/DeviceItem/DeviceItem";
+import QuestionsHead from "./Questions/QuestionsHead/QuestionsHead";
+import QuestionsBox from "./Questions/QuestionsBox/QuestionsBox";
 
 /* Icons */
 
@@ -26,4 +29,4 @@ export {CiSearch, PiUserCircle, GrLanguage,
     mobile, tablet, smart_tv, laptop, gaming, vr, MdOutlineDateRange, HiOutlineLanguage, FaRegStar,
     BiCameraMovie
 }
-export {HomePage, FilmDescription}
+export {HomePage, FilmDescription, DeviceItem, QuestionsHead, QuestionsBox}
