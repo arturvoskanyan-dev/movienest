@@ -15,6 +15,8 @@ import { MdOutlineDateRange } from "react-icons/md";
 import { HiOutlineLanguage } from "react-icons/hi2";
 import { FaRegStar } from "react-icons/fa";
 import { BiCameraMovie } from "react-icons/bi";
+import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowLeft } from "react-icons/fa6";
 
 /* Images */
 
@@ -27,6 +29,6 @@ import vr from "../assets/VR.svg";
 
 export {CiSearch, PiUserCircle, GrLanguage, 
     mobile, tablet, smart_tv, laptop, gaming, vr, MdOutlineDateRange, HiOutlineLanguage, FaRegStar,
-    BiCameraMovie
+    BiCameraMovie, FaArrowRight, FaArrowLeft
 }
 export {HomePage, FilmDescription, DeviceItem, QuestionsHead, QuestionsBox}
