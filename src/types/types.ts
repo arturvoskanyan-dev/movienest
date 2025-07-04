@@ -1,6 +1,8 @@
 export type GenresType = {
     id : number,
     name : string,
+    // images?: string[]
+    images?: string
 }
 
 export interface FilmsType {

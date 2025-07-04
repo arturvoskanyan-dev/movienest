@@ -27,8 +27,19 @@ import laptop from "../assets/laptop.svg";
 import gaming from "../assets/gaming.svg";
 import vr from "../assets/VR.svg";
 
+/* Genres Images */
+
+import action from "../assets/genres/action.png"
+import adventure from "../assets/genres/adventure.png"
+import drama from "../assets/genres/drama.png"
+import comedy from "../assets/genres/comedy.png"
+
+
 export {CiSearch, PiUserCircle, GrLanguage, 
     mobile, tablet, smart_tv, laptop, gaming, vr, MdOutlineDateRange, HiOutlineLanguage, FaRegStar,
     BiCameraMovie, FaArrowRight, FaArrowLeft
 }
+
+export {action, adventure, drama, comedy}
+
 export {HomePage, FilmDescription, DeviceItem, QuestionsHead, QuestionsBox}
