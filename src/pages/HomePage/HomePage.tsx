@@ -10,7 +10,7 @@ export default function HomePage() {
       <Hero />
       <HomeGenres />
       <Devices />
-      <Questions />
+      {/* <Questions /> */}
       <Trail />
     </section>
   )
