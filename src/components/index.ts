@@ -5,6 +5,8 @@ import FilmDescription from "./FilmDescription/FilmDescription";
 import DeviceItem from "./Devices/DeviceItem/DeviceItem";
 import QuestionsHead from "./Questions/QuestionsHead/QuestionsHead";
 import QuestionsBox from "./Questions/QuestionsBox/QuestionsBox";
+import MenuSection from "./MenuSection/MenuSection";
+import NavItems from "./NavItems/NavItems";
 
 /* Icons */
 
@@ -18,6 +20,7 @@ import { BiCameraMovie } from "react-icons/bi";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 import { HiMenuAlt3 } from "react-icons/hi";
+import { MdClose } from "react-icons/md";
 
 /* Images */
 
@@ -38,9 +41,9 @@ import comedy from "../assets/genres/comedy.png"
 
 export {CiSearch, PiUserCircle, GrLanguage, 
     mobile, tablet, smart_tv, laptop, gaming, vr, MdOutlineDateRange, HiOutlineLanguage, FaRegStar,
-    BiCameraMovie, FaArrowRight, FaArrowLeft, HiMenuAlt3
+    BiCameraMovie, FaArrowRight, FaArrowLeft, HiMenuAlt3, MdClose
 }
 
 export {action, adventure, drama, comedy}
 
-export {HomePage, FilmDescription, DeviceItem, QuestionsHead, QuestionsBox}
+export {HomePage, FilmDescription, DeviceItem, QuestionsHead, QuestionsBox, MenuSection, NavItems}
