@@ -6,7 +6,7 @@ export default function GenresItem({genre}: {genre: GenresType}) {
     const images = [adventure, action, comedy, drama];
     
     return (
-        <NavLink to={`/category/${genre.id}/1`} className="bg-[#1A1A1A] w-[295px] h-[342px] p-[30px] flex flex-wrap gap-1 rounded-xl cursor-pointer">
+        <NavLink to={`/category/${genre.id}/1`} className="bg-[#1A1A1A] w-[295px] h-[342px] p-[30px] flex flex-wrap gap-1 rounded-xl cursor-pointer max-[1440px]:w-[239px] max-[1440px]:h-[282px]">
             <img src={genre.images || images[Math.round(Math.random() * 3)]} />
             <div className="flex justify-between items-center w-full">
                 <h3 className="text-white text-xl">{genre.name}</h3>
