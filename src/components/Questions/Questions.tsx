@@ -7,36 +7,44 @@ export default function Questions() {
             {
                 id: 1,
                 title: "What is StreamVibe?",
+                isOpen: false
             },
             {
                 id: 2,
                 title: "What is StreamVibe?",
+                isOpen: false
             },
             {
                 id: 3,
                 title: "What is StreamVibe?",
+                isOpen: false
             },
             {
                 id: 4,
                 title: "What is StreamVibe?",
+                isOpen: false
             },
         ],
         [
             {
                 id: 5,
                 title: "What is StreamVibe?",
+                isOpen: false
             },
             {
                 id: 6,
                 title: "What is StreamVibe?",
+                isOpen: false
             },
             {
                 id: 7,
                 title: "What is StreamVibe?",
+                isOpen: false
             },
             {
                 id: 8,
                 title: "What is StreamVibe?",
+                isOpen: false
             },
         ]
     ];
@@ -48,7 +56,7 @@ export default function Questions() {
             </div>
             <div className='flex justify-between gap-[80px] px-12'>
                 <QuestionsBox questions={questionsArr[0]} />
-                <QuestionsBox questions={questionsArr[1]} />
+                <QuestionsBox questions={questionsArr[1]} /> 
             </div>
         </section>
     )

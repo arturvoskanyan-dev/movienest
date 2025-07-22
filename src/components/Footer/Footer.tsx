@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="w-full bg-[#090909]">
-        <section className="max-w-[1440px] w-full px-12 py-[48px] mx-auto flex justify-between text-white [&>div>span]:text-[#999999] [&>div>h4]:text-xl">
+        <section className="max-w-[1440px] w-full px-12 py-[48px] mx-auto flex justify-between gap-4 text-white [&>div>span]:text-lg [&>div>span]:text-[#999999] [&>div>h4]:text-xl max-[768px]:grid max-[768px]:grid-cols-2 [&>div>h4]:max-[1440px]:text-lg [&>div>span]:max-[1440px]:text-base [&>div>h4]:max-[768px]:text-base">
             <div className="flex flex-col">
                 <h4>Home</h4>
                 <span>Categories</span>
@@ -46,9 +46,9 @@ export default function Footer() {
             </div>
         </section>
         <div className="max-w-[1440px] mx-auto border-t-2 border-[#999999] pt-2"></div>
-        <section className="max-w-[1440px] mx-auto px-12 py-4 flex justify-between text-[#999999]">
-            <h4>@2025 movienest, Create Artur Voskanyan</h4>
-            <div className="flex gap-4">
+        <section className="max-w-[1440px] mx-auto px-12 py-4 flex justify-between text-[#999999] max-[768px]:flex-wrap">
+            <h4 className="text-lg max-[1440px]:text-base">@2025 movienest, Create Artur Voskanyan</h4>
+            <div className="flex gap-4 [&>span]:text-lg [&>span]:max-[1440px]:text-base">
                 <span>Terms of Use</span>|
                 <span>Privacy Policy</span>|
                 <span>Cookie Policy</span>

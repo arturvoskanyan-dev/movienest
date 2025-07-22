@@ -40,3 +40,9 @@ export type FilmSliceStateType = {
     film: FilmsType,
     videoKey: string
 }
+
+export type QuestionsType = {
+    id: number,
+    title: string,
+    isOpen: boolean,
+}
