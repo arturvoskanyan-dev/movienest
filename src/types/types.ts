@@ -45,4 +45,5 @@ export type QuestionsType = {
     id: number,
     title: string,
     isOpen: boolean,
+    answer: string
 }

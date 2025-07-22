@@ -18,7 +18,7 @@ export default function QuestionsBox({ questions }: { questions: Array<Questions
     }
 
     return (
-        <div className='w-[558px] h-[556px]'>
+        <div className='w-[558px] h-[556px] max-[1440px]:w-[420px] max-[1440px]:h-[456px] max-[768px]:w-[356px] '>
             {newQuestions.map((question: QuestionsType) => <QuestionItem key={question.id} question={question} toggle={toggle} />)}
         </div>
     )
