@@ -54,3 +54,9 @@ export type PlanTypes = {
     price: number,
     info: string
 }
+
+export type PlanHeadTypes = {
+    monthly: () => void,
+    yearly: () => void,
+    time: string
+}
