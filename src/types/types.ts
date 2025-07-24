@@ -47,3 +47,10 @@ export type QuestionsType = {
     isOpen: boolean,
     answer: string
 }
+
+export type PlanTypes = {
+    id: number,
+    title: string,
+    price: number,
+    info: string
+}
